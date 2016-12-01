@@ -49,7 +49,7 @@ if __name__ == '__main__':
             'W': lambda: setattr(coords, 'x', coords.x - 1),
         }
 
-        for i in range(steps):
+        for _ in range(steps):
             direction_funcs[directions[0]]()
             if tuple(coords) in locations:
                 print(coords.distance_from_origin)
